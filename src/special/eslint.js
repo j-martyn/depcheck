@@ -90,6 +90,7 @@ function loadConfig(preset, rootDir) {
 
 function checkConfig(config, rootDir) {
   const parser = wrapToArray(config.parser);
+  // FIXME: handle scoped plugins
   const plugins = wrapToArray(config.plugins).map(plugin => `eslint-plugin-${plugin}`);
 
   const presets = wrapToArray(config.extends)
